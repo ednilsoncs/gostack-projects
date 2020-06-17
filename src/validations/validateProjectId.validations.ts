@@ -7,7 +7,6 @@ export default async (
   next: NextFunction
 ) => {
   const { id } = request.params;
-  console.log(id);
   if (!isUuid(id)) {
     return response.status(400).json({ error: "Invalid project ID." });
   }
